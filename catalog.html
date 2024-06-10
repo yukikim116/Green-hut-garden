@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="catst.css">
+</head>
+<header class="header">
+    <a href="index.html" class="logo-container">
+        <img src="images/logo.png" alt="logotip" class="logotiti">
+        <span class="logo">Зелёная Хижина</span>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="button">Главная</a></li>
+            <li><a href="catalog.html" class="button">Каталог</a></li>
+            <li><a href="trash.html" class="button">Корзина</a></li>
+            <li><a href="my_order.html" class="button">Мои заказы</a></li>
+            <li><a href="contact.html" class="button">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+<body>        
+    <main>
+        <div class="category-buttons">
+            <button onclick="showCategory('all')">Все</button>
+            <button onclick="showCategory('trees')">Деревья</button>
+            <button onclick="showCategory('shrubs')">Кустарники</button>
+            <button onclick="showCategory('climbers')">Вьющиеся растения</button>
+            <button onclick="showCategory('perennials')">Многолетники и низкорослые растения</button>
+            <button onclick="showCategory('container_plants')">Декоративные растения для контейнеров и внутреннего озеленения</button>
+        </div>
+        <div id="searchResults" class="container">
+            <!-- Результаты поиска будут отображаться здесь -->
+        </div>
+        <div class="container category" id="trees">
+            <!-- Карточки товаров для категории Trees -->
+        </div>
+        <div class="container category" id="shrubs">
+            <!-- Карточки товаров для категории Shrubs -->
+        </div>
+        <div class="container category" id="climbers">
+            <!-- Карточки товаров для категории Climbers -->
+        </div>
+        <div class="container category" id="perennials">
+            <!-- Карточки товаров для категории Perennials -->
+        </div>
+        <div class="container category" id="container_plants">
+            <!-- Карточки товаров для категории Container Plants -->
+        </div>
+        <div id="catalog" class="catalog-grid"></div>
+    
+
+    <!-- Modal --> 
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-right">
+                        <img id="modalImage" src="" alt="Product Image">
+                    </div>
+                    <div class="modal-left">
+                        <h2 id="modalTitle"></h2>
+                        <p id="modalPrice"></p>
+                        <div id="modalDetails"></div>
+                        <div class="quantity-container">
+                            <div class="quantity-controls">
+                                <label for="quantity">Количество:</label>
+                                <button class="quantity-button" id="decreaseQuantity">&minus;</button>
+                                <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+                                <button class="quantity-button" id="increaseQuantity">&plus;</button>
+                            </div>
+                            <button class="modal-button" id="addToCartButton">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto');
+    src: url(/fonts/Roboto-Regular.woff);
+}
+
+@font-face {
+    font-family: 'KyivTypeTitling-Bold2';
+    src: local('KyivTypeTitling-Bold2');
+    src: url(/fonts/KyivTypeTitling-Bold2.woff);
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: local('Philosopher');
+    src: url(/fonts/Philosopher-Regular.woff);
+}
+body{
+    background-color: whitesmoke;
+    margin: 0;
+    font-family: 'Roboto';
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%; /* Шапка займёт всю ширину окна браузера */
+    z-index: 1000;
+    text-align: left;
+    background: whitesmoke;
+    height: 80px;
+    border-bottom: 1px solid rgb(174, 174, 174);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+li{
+    display: inline;
+    margin-right: 10px;
+}
+main {
+    margin-top: 100px; /* Отступ для предотвращения перекрытия содержимого заголовком */
+}
+.button{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 1px;
+    font-size: 20px;
+    color: white;
+    background-color: #019863;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+nav{
+    list-style: none; /*откл. маркеров*/
+    float:right;
+    margin-top: 15px;
+    margin-right:20px;
+    font-size:0;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    margin-top: -2px;
+}
+
+.logo {
+    font-size: 25px;
+    font-family: 'KyivTypeTitling-Bold2';
+    color: rgb(91, 57, 5);
+}
+
+.logotiti {
+    width: 110px;
+    height: auto;
+    margin: 2px;
+    border: none;
+}
+.container {
+    display: flex; /* Initially show all categories */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.container.active {
+    display: flex; /* Display only the active category */
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.category-buttons button {
+    border-radius: 8px;
+    font-family: 'Philosopher';
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #019863;
+    color: white;
+    border: 1px solid black;
+   
+    cursor: pointer;
+}
+
+.category-buttons button:hover {
+    background-color: #45a049;
+}
+.container.hidden {
+    display: none; /* Hide categories when necessary */
+}
+.container {
+    margin: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 10px; /* Уменьшение нижнего отступа */
+    box-sizing: border-box; /* Убедимся, что используется box-sizing */
+}
+.container + .container {
+    margin-top: 10px; /* Уменьшение верхнего отступа между контейнерами */
+}
+.item {
+    box-shadow: #888;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding: 15px;
+    margin: 10px;
+    width: calc(25% - 20px);
+    box-sizing: border-box; /* Убедимся, что используется box-sizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Плавные переходы */
+}
+.item:hover {
+    transform: scale(1.02); /* Легкое увеличение при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавление тени для эффекта */
+}
+.item img {
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.2s ease; /* Плавные переходы */
+}
+.item .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.item h2 {
+    font-family: 'KyivTypeTitling-Bold2';
+    margin: 5px 0;
+}
+.item .price {
+    font-size: 20px;
+    font-family: 'Philosopher';
+    margin: 5px 0;
+    font-weight: bold;
+    color: #000000; /* Изменение цвета текста */
+}
+.item .description {
+    
+    flex-grow: 1; /* Чтобы описания занимали оставшееся пространство */
+    margin: 5px 0;
+}
+.buy-button {
+    font-family:'KyivTypeTitling-Bold2';
+    font-size: 16px;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #019863;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Убедимся, что используется box-sizing */
+    transition: background-color 0.2s ease; /* Плавные переходы */
+}
+.buy-button:hover {
+    background-color: #45a049; /* Изменение цвета при наведении */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+.modal-content {
+    border-radius: 8px;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: slide-in 0.5s forwards;
+    display: flex;
+    flex-direction: column;
+}
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.close {
+    position: absolute;
+    right: 17px;
+    top: 0;
+    color: #aaa;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-body {
+    display: flex;
+    justify-content: space-between;
+}
+.modal-left {
+    width: 50%;
+    padding-right: 20px;
+}
+.modal-left h2 {
+    font-family: 'KyivTypeTitling-Bold2';
+    margin-top: -4px;
+    font-size: 25px;
+    margin-bottom: 5px; /* Уменьшение нижнего отступа для заголовка */
+}
+.modal-left p {
+    margin-top: 5px; /* Уменьшение верхнего отступа для абзаца */
+}
+.modal-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-right img {
+    width: 400px; /* Фиксированная ширина */
+    height: 400px; /* Фиксированная высота */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid gray;
+}
+#modalPrice{
+    font-family: 'Philosopher';
+    margin-bottom: 4px;
+    font-size: 20px;
+    color: black;
+}
+.modal-button {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #019863;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    width: 90%;
+}
+#modalDetails p {
+    font-size: 16px;
+    font-family: 'Roboto';
+    margin: 10px 0; /* Уменьшение расстояния между абзацами */
+}
+/* Добавление псевдоэлемента для выравнивания */
+.container::after {
+    content: '';
+    flex-grow: 1;
+    max-width: calc(25% - 20px);
+}
+
+.quantity-container input,
+.quantity-container .modal-button {
+    
+    margin-top: 5px; /* Отступ сверху для всех элементов */
+    font-family: 'KyivTypeTitling-Bold2';
+    margin-right: 10px; /* Расстояние между меткой и полем ввода */
+    font-size: 16px; /* Увеличение размера шрифта */
+}
+.quantity-container input {
+    width: 70px;
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.2em; /* Увеличение размера шрифта */
+    -moz-appearance: textfield; /* Firefox */
+}
+.quantity-button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.quantity-button:hover {
+    background-color: #ccc;
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.quantity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quantity-controls {
+    margin-left: -30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Расстояние между контролами и кнопкой */
+}
+#quantity {
+    width: 45px;
+    text-align: center;
+    margin-right: 5px; /* Отступ между полем ввода и кнопкой уменьшения */
+}
+.quantity-container label{
+    font-size: 19px;
+    font-family: 'Philosopher';
+    font-weight: bold;
+    margin-right: 5px;
+}

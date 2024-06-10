@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto');
+    src: url(/fonts/Roboto-Regular.woff);
+}
+
+@font-face {
+    font-family: 'KyivTypeTitling-Bold2';
+    src: local('KyivTypeTitling-Bold2');
+    src: url(/fonts/KyivTypeTitling-Bold2.woff);
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: local('Philosopher');
+    src: url(/fonts/Philosopher-Regular.woff);
+}
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    font-family: 'Roboto';
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: left;
+    background: whitesmoke;
+    height: 80px;
+    border-bottom: 1px solid rgb(174, 174, 174);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+li {
+    display: inline;
+    margin-right: 10px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 1px;
+    font-size: 20px;
+    color: white;
+    background-color: #019863;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+nav {
+    list-style: none;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size: 0;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    margin-top: -2px;
+}
+.logo {
+    font-size: 25px;
+    font-family: 'KyivTypeTitling-Bold2';
+    color: rgb(91, 57, 5);
+}
+.logotiti {
+    width: 110px;
+    height: auto;
+    margin: 2px;
+    border: none;
+}.contact-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-family: 'KyivTypeTitling-Bold2';
+    color: #019863;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-info, .address-info, .feedback-form, .map {
+    margin-bottom: 40px;
+}
+
+.contact-info h2, .address-info h2, .feedback-form h2, .map h2 {
+    color: #000000;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-family: 'KyivTypeTitling-Bold2';
+}
+
+.contact-info p, .address-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.map iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+.footer {
+    background-color: #019863;
+    color: #FFF;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 0;
+}
+
+.email-link,
+.nav-link,
+.social-link {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-bottom: 5px;
+}
+
+.nav-list li a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.social-link {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.email-input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.subscribe-button {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #019863;
+    color: #FFF;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #FFF;
+    margin-top: 20px;
+}
+.newsletter-message {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}

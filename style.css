@@ -1,0 +1,713 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto');
+    src: url(/fonts/Roboto-Regular.woff);
+}
+
+@font-face {
+    font-family: 'KyivTypeTitling-Bold2';
+    src: local('KyivTypeTitling-Bold2');
+    src: url(/fonts/KyivTypeTitling-Bold2.woff);
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: local('Philosopher');
+    src: url(/fonts/Philosopher-Regular.woff);
+}
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    font-family: 'Roboto';
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: left;
+    background: whitesmoke;
+    height: 80px;
+    border-bottom: 1px solid rgb(174, 174, 174);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+li {
+    display: inline;
+    margin-right: 10px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 1px;
+    font-size: 20px;
+    color: white;
+    background-color: #019863;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+nav {
+    list-style: none;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size: 0;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    margin-top: -2px;
+}
+.logo {
+    font-size: 25px;
+    font-family: 'KyivTypeTitling-Bold2';
+    color: rgb(91, 57, 5);
+}
+.logotiti {
+    width: 110px;
+    height: auto;
+    margin: 2px;
+    border: none;
+}
+.hero-container {
+    width: 100%;
+    max-width: 1180px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 20px;
+    box-sizing: border-box; /* Учитывает padding в ширине элемента */
+}
+.hero-text {
+    text-align: left;
+    margin-top: 20px;
+    margin: -205px;
+    position: absolute;
+    left: 35%;
+    transform: translate(-10%, -50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 55%;
+    max-width: 800px;
+}
+.hero-text h1 {
+    color: white;
+    font-family: 'KyivTypeTitling-Bold2';
+    font-size: 36px;
+}
+.hero-text p {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 18px;
+    margin: 1px 0 0;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 1050px;
+    margin-top: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+.hero-image {
+    padding: 20px;
+    text-align: center;
+}
+main {
+    margin: 80px auto;
+}
+.search-container {
+    position: absolute;
+    top: 58%;
+    left: 18%;
+    transform: translate(-10%, 100%);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#searchInput {
+    font-family: 'Philosopher';
+    padding: 10px;
+    width: auto;
+    flex-grow: 1;
+    width: 350px; /* Увеличенная максимальная ширина */
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    margin-right: -3.99px;    height: 40px; /* Добавлено для синхронизации высоты */
+    box-sizing: border-box;
+}
+button {
+    font-family: 'Philosopher';
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #019863;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    height: 40px; /* Добавлено для синхронизации высоты */
+    box-sizing: border-box;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 35px;
+    margin: 5px;
+    flex-wrap: nowrap;
+}
+.about-image {
+    width: 100%;
+    max-width: 525px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+.about-text {
+    max-width: 600px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    flex: 1 1 auto;
+}
+.about-text h2 {
+    font-family: 'KyivTypeTitling-Bold2';
+    font-size: 36px;
+    color: rgb(91, 57, 5);
+    margin-bottom: 10px;
+}
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #searchInput, button {
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+}
+.section-our{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 35px;
+    margin: 5px;
+    flex-wrap: nowrap;
+}
+.section-our h2{
+    margin-top: -50px;
+    font-family: 'KyivTypeTitling-Bold2';
+    font-size: 36px;
+    color: rgb(91, 57, 5);
+}
+.catalog-button {
+    font-family: 'Philosopher';
+    margin-left: -300px;
+    margin-top: 60px;
+    padding: 1px 29px;
+    font-size: 20px;
+    color: white;
+    background-color: #019863;
+    border: none;
+    border-radius: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.catalog-button:hover {
+    background-color: #0056b3;
+}
+.section-preim{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 35px;
+    margin: 5px;
+    
+}
+.section-preimtext{
+    align-self: flex-start;
+}
+.section-preimtext h2{
+    
+    font-family: 'KyivTypeTitling-Bold2';
+    font-size: 36px;
+    color: rgb(91, 57, 5);
+}
+.section-preimtext p{
+    font-family: 'KyivTypeTitling-Bold2';
+    text-align: left;
+    font-size: 19px;
+    color: #333;
+}
+.section-preim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    margin: 5px;
+}
+.section-preimtext h2 {
+    margin-top: -50px;
+    font-family: 'KyivTypeTitling-Bold2';
+    font-size: 36px;
+    color: rgb(91, 57, 5);
+}
+.section-preimtext p {
+    font-family: 'Philosopher';
+    text-align: left;
+    font-size: 28px;
+    color: #000000;
+}
+.preim-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.preim-item {
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+}
+.preim-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+.preim-item h2{
+    text-align: center;
+    font-family: 'Philosopher';
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+.preim-item p {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+}
+.section-uni {
+    text-align: center;
+}
+.section-uni h2{
+    font-weight: bold;
+    text-align: center;
+    font-family: 'KyivTypeTitling-Bold2';
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+}
+.section-uni p{
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    font-family: 'KyivTypeTitling-Bold2';
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    font-family: 'Roboto';
+    margin-bottom: 5px;
+}
+
+.modal-content input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-submit-button {
+    align-self: flex-end;  /* Aligns the button to the right */
+    font-family: 'Philosopher';
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #019863;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+.accordion {
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 5px solid whitesmoke;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background-color: #019863;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background-color: #FFFFFF;
+    font-size: 16px;
+}
+
+.accordion-content p {
+    font-family: 'Roboto';
+    text-align: left;
+    font-size: 17px;
+    color: #000000;
+    margin: 0;
+}
+.footer {
+    background-color: #019863;
+    color: #FFF;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 0;
+}
+
+.email-link,
+.nav-link,
+.social-link {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-bottom: 5px;
+}
+
+.nav-list li a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.social-link {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.email-input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.subscribe-button {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #019863;
+    color: #FFF;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #FFF;
+    margin-top: 20px;
+}
+.newsletter-message {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.accordion h2{
+    text-align: center;
+    font-family: 'KyivTypeTitling-Bold2';
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+}
+.services-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.services-section h1 {
+    font-family: 'KyivTypeTitling-Bold2';
+    color:black;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.service-item img {
+    border: 1px solid gray;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.service-item h2 {
+    font-family: 'Philosopher';
+    color: #6a411d;
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+.service-item ul {
+    font-weight: bold;
+    font-family: 'Philosopher';
+    font-size: 21px;
+    line-height: 1.6;
+    list-style: none;
+    padding-left: 0;
+    text-align: center; /* выравнивание по левому краю */
+}
+
+.service-item ul ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.dot-list li::before {
+    content: "•";
+    color: #2E8B57;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.dot-list li {
+    margin-bottom: 20px; /* увеличенный отступ между пунктами */
+    text-align: center; /* выравнивание по левому краю */
+    padding-left: 20px;
+}
+.service-item ul .dot-list li {
+    font-weight:normal;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #000000;
+}
+.service-item.small {
+    width: 30%; /* размер карточки Основные Услуги */
+}
+.review-slider {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    position: relative; /* Добавлено для фиксирования кнопок внутри контейнера */
+}
+
+.review-slider h2 {
+    font-family: 'KyivTypeTitling-Bold2';
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-inner {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-inner .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.slider-inner .slide p {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #333;
+    margin: 10px;
+}
+
+.slider-btn {
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 900;
+}
+
+.prev-btn {
+    left: 0px;
+    width: 28px;
+    height: 230px;
+}
+
+.next-btn {
+    
+    right: 0px;
+    width: 28px;
+    height: 230px;
+}
+.highlight {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}

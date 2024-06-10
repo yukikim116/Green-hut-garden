@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="trash.css">
+</head>
+<header class="header">
+    <a href="index.html" class="logo-container">
+        <img src="images/logo.png" alt="logotip" class="logotiti">
+        <span class="logo">Зелёная Хижина</span>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="button">Главная</a></li>
+            <li><a href="catalog.html" class="button">Каталог</a></li>
+            <li><a href="trash.html" class="button">Корзина</a></li>
+            <li><a href="my_order.html" class="button">Мои заказы</a></li>
+            <li><a href="contact.html" class="button">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div id="cart"></div>
+        <button id="clearCartButton" class="clear-cart-button">Удалить всё</button>
+        <button id="checkoutButton" style="display: none;">Оформить заказ</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-right">
+                        <img id="modalImage" src="" alt="Product Image">
+                    </div>
+                    <div class="modal-left">
+                        <h2 id="modalTitle"></h2>
+                        <p id="modalPrice"></p>
+                        <div id="modalDetails"></div>
+                        <div class="quantity-container">
+                            <button id="decreaseModalQuantity" class="quantity-button">−</button>
+                            <input type="number" id="modalQuantity" name="modalQuantity" min="1" max="100" value="1">
+                            <button id="increaseModalQuantity" class="quantity-button">+</button>
+                            <button class="modal-button" id="updateCartButton">Обновить корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Модальное окно для оформления заказа -->
+        <div id="checkoutModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Оформление заказа</h2>
+                <form id="checkoutForm">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7">
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="name">Ваше ФИО:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="delivery">Доставка:</label>
+                    <select id="delivery" name="delivery" required>
+                        <option value="cdek">СДЭК</option>
+                        <option value="russian_post">Почта России</option>
+                        <option value="boxberry">Boxberry</option>
+                    </select>
+                
+                    <label for="city">Город:</label>
+                    <select id="city" name="city" required>
+                        <option value="Москва">Москва</option>
+                        <option value="Санкт-Петербург">Санкт-Петербург</option>
+                        <option value="Казань">Казань</option>
+                        <option value="Нижний новгород">Нижний Новгород</option>
+                    </select>
+                
+                    <label for="index">Индекс:</label>
+                    <input type="text" id="index" name="index" required>
+                
+                    <label for="street">Улица:</label>
+                    <input type="text" id="street" name="street" required>
+                
+                    <label for="house">Дом:</label>
+                    <input type="text" id="house" name="house" required>
+                
+                    <label for="apartment">Квартира:</label>
+                    <input type="text" id="apartment" name="apartment" required>
+                
+                    <label for="payment">Способ оплаты:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="cash_on_delivery">Оплата при получении</option>
+                        <option value="online_payment">Оплата онлайн</option>
+                    </select>
+                
+                    <label for="comment">Комментарий:</label>
+                    <textarea id="comment" name="comment"></textarea>
+                
+                    <button type="submit">Отправить заказ</button>
+                </form>
+            </div>
+        </div>
+            
+    
+
+    <script src="cart.js"></script>
+</body>
+</html>

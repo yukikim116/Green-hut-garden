@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto');
+    src: url(/fonts/Roboto-Regular.woff);
+}
+
+@font-face {
+    font-family: 'KyivTypeTitling-Bold2';
+    src: local('KyivTypeTitling-Bold2');
+    src: url(/fonts/KyivTypeTitling-Bold2.woff);
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: local('Philosopher');
+    src: url(/fonts/Philosopher-Regular.woff);
+}
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: left;
+    background: whitesmoke;
+    height: 80px;
+    border-bottom: 1px solid rgb(174, 174, 174);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 1px;
+    font-size: 20px;
+    color: white;
+    background-color: #019863;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav {
+    list-style: none;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    margin-top: -2px;
+}
+
+.logo {
+    font-size: 25px;
+    font-family: 'KyivTypeTitling-Bold2';
+    color: rgb(91, 57, 5);
+}
+
+.logotiti {
+    width: 110px;
+    height: auto;
+    margin: 2px;
+    border: none;
+}
+.order {
+    background-color: whitesmoke;
+    margin: 90px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order h2 {
+    margin: 0 0 10px;
+}
+
+.order p {
+    font-family: 'Roboto';
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.items-list .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer; /* Указатель курсора на элементе */
+}
+
+.items-list .item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.items-list .item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-list .item-details p {
+    font-family: 'KyivTypeTitling-Bold2';
+    text-align: left;
+    margin: 0;
+    font-size: 18px; /* Увеличенный размер шрифта */
+}
+
+.total-price {
+    font-family:KyivTypeTitling-Bold2;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    position: relative;
+    border-radius: 8px;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: slide-in 0.5s forwards;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.modal-right {
+    width: 50%;
+    padding-right: 20px;
+}
+
+img#itemImage {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid gray;
+}
+
+h2#itemTitle {
+    margin-top: 2px;
+    margin-bottom: 15px;
+    font-family: 'KyivTypeTitling-Bold2';
+}
+
+.close, .close-confirm {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: #aaa;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus, .close-confirm:hover, .close-confirm:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.confirm-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#confirmYes {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#confirmYes:hover {
+    background-color: #c0392b;
+}
+
+#confirmNo {
+    background-color: #ddd;
+    color: black;
+}
+
+#confirmNo:hover {
+    background-color: #ccc;
+}
+button.cancel-order-button{
+    padding: 8px 20px;
+    margin: 1px;
+    font-family: 'Philosopher';
+    font-size: 20px;
+    color: white;
+    background-color: #019863;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+}
+.modal-content p {
+    margin: 5px 0; /* Установите желаемое расстояние между абзацами */
+}

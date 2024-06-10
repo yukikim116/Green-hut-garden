@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зелёная хижина</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="search.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo-container">
+            <img src="images/logo.png" alt="logotip" class="logotiti">
+            <span class="logo">Зелёная Хижина</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="button">Главная</a></li>
+                <li><a href="catalog.html" class="button">Каталог</a></li>
+                <li><a href="trash.html" class="button">Корзина</a></li>
+                <li><a href="my_order.html" class="button">Мои заказы</a></li>
+                <li><a href="contact.html" class="button">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-container">
+        <div class="hero-image">
+            <img src="Изображения/GEGEGE.png" alt="Hero Image">
+            <div class="hero-text">
+                <h1>Зелёная хижина</h1>
+                <p>Мы предлагаем выращенные с любовью растения. Забота о природе, забота о вас)</p>
+            </div>
+            <div class="search-container">
+                <form id="searchForm" action="catalog.html" method="GET">
+                    <input type="text" id="searchInput" name="search" placeholder="Поиск растений...">
+                    <button type="submit">Поиск</button>
+                </form>
+            </div>
+        </div>
+        <div class="section-our">
+            <h2>Наши продукты</h2>
+            <button class="catalog-button" onclick="location.href='catalog.html'">Перейти в каталог</button>
+        </div>
+
+        <div class="about-section" id="about-us">
+            <img src="images/about.jpg" alt="About Us" class="about-image">
+            <div class="about-text" id="about-us">
+                <h2>О нас</h2>
+                <p>Мы являемся ведущими специалистами в области садоводства. Наша миссия - создавать красивые сады для всех наших клиентов.</p>
+
+            </div>
+        </div>
+        <div class="section-preim">
+            <div class="section-preimtext">
+                <h2>Наши преимущества</h2>
+                <p>Наши услуги</p>
+            </div>
+            <div class="preim-container">
+                <div class="preim-item">
+                    <img src="images/preim1.jpg" alt="Преимущество 1">
+                    <h2>Возможность самостоятельного сбора</h2>
+                    <p>Самостоятельный сбор товаров в наших питомниках</p>
+                </div>
+                <div class="preim-item">
+                    <img src="images/preim2.jpg" alt="Преимущество 2">
+                    <h2>Доставка</h2>
+                    <p>Быстрая доставка в течении 2-3 дней</p>
+                </div>
+                <div class="preim-item">
+                    <img src="images/preim3.jpg" alt="Преимущество 3">
+                    <h2>Садоводство по заказу</h2>
+                    <p>Создание уникального сада под ключ</p>
+                </div>
+            </div>
+        </div>
+        <section class="services-section">
+            <h1>Наши Услуги</h1>
+            <p>Компания "Зеленая Хижина" специализируется на выращивании и продаже садовых растений. Мы предлагаем широкий выбор растений для вашего сада, включая декоративные кустарники, цветы, деревья и травы.</p>
+        
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="images/consultation.jpg" alt="Консультации">
+                    <h2>Дополнительные Услуги</h2>
+                    <ul>
+                        <li>Консультации по уходу за растениями:
+                            <ul class="dot-list">
+                                <li>Индивидуальные консультации по выбору растений</li>
+                                <li>Советы по посадке и уходу</li>
+                                <li>Рекомендации по борьбе с вредителями и болезнями</li>
+                            </ul>
+                        </li>
+                        <li>Проектирование ландшафта:
+                            <ul class="dot-list">
+                                <li>Разработка индивидуальных ландшафтных проектов</li>
+                                <li>Консультации по ландшафтному дизайну</li>
+                                <li>Создание планов посадки растений</li>
+                            </ul>
+                        </li>
+                        <li>Доставка на дом:
+                            <ul class="dot-list">
+                                <li>Удобная и быстрая доставка</li>
+                                <li>Выбор удобного времени доставки</li>
+                                <li>Варианты упаковки для безопасной транспортировки</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="service-item">
+                    <img src="images/planting.jpg" alt="Посадка растений">
+                    <h2>Дополнительные Возможности</h2>
+                    <ul>
+                        <li>Услуги по посадке растений:
+                            <ul class="dot-list">
+                                <li>Помощь в посадке купленных растений</li>
+                                <li>Установка и уход за растениями на месте</li>
+                            </ul>
+                        </li>
+                        <li>Сезонные предложения:
+                            <ul class="dot-list">
+                                <li>Специальные предложения и скидки</li>
+                                <li>Наборы растений для определенных сезонов и праздников</li>
+                            </ul>
+                        </li>
+                        <li>Обучающие мастер-классы и семинары:
+                            <ul class="dot-list">
+                                <li>Мастер-классы по садоводству</li>
+                                <li>Семинары по ландшафтному дизайну и уходу за растениями</li>
+                            </ul>
+                        </li>
+                        <li>Программы лояльности:
+                            <ul class="dot-list">
+                                <li>Скидки для постоянных клиентов</li>
+                                <li>Бонусные программы и акции</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="service-item small">
+                    <img src="images/plants.jpg" alt="Садовые растения">
+                    <h2>Основные Услуги</h2>
+                    <ul>
+                        <li>Продажа садовых растений:
+                            <ul>
+                                <li>Декоративные кустарники</li>
+                                <li>Цветы</li>
+                                <li>Деревья</li>
+                                <li>Травы</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+        <div class="accordion" id="lilili">
+            <h2>Часто задаваемые вопросы:</h2>
+            <div class="accordion-item">
+                <button class="accordion-header">Вопрос 1: Как сделать заказ?</button>
+                <div class="accordion-content">
+                    <p>Ответ: Вы можете сделать заказ через наш сайт, заполнив форму заказа, или позвонить нам по телефону.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Вопрос 2: Какие способы оплаты вы принимаете?</button>
+                <div class="accordion-content">
+                    <p>Ответ: Мы принимаем к оплате банковские карты, электронные кошельки и наличные.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Вопрос 3: Какова политика возврата?</button>
+                <div class="accordion-content">
+                    <p>Ответ: Вы можете вернуть товар в течение 14 дней с момента покупки при наличии чека и сохраненной упаковки.</p>
+                </div>
+            </div>
+        </div>
+        <div class="review-slider">
+            <h2>Отзывы наших клиентов</h2>
+            <div class="slider">
+                <button class="slider-btn prev-btn">&lt;</button>
+                <div class="slider-wrapper">
+                    <div class="slider-inner">
+                        <!-- Слайды с отзывами будут вставляться сюда JavaScript'ом -->
+                    </div>
+                </div>
+                <button class="slider-btn next-btn">&gt;</button>
+            </div>
+        </div>
+        <div class="section-uni">
+            <h2>Хотите создать уникальный сад?</h2>
+            <p>Наши сотрудники помогут вам воплотить ваши мечты</p>
+            <button id="openModalBtn" class="button">Заказать консультацию</button>
+        </div>
+        <div id="consultationModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <h2>Заполните форму для консультации</h2>
+                <form id="consultationForm">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="phone">Телефон:</label>
+                    <input type="text" id="phone" name="phone" value="+7" required>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <div id="catalog"></div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="column">
+                <h3>Контактная информация</h3>
+                <p>Адрес: Россия, Москва, Пасечная ул., 5, стр. 45</p>
+                <p>Телефон: +75256456237</p>
+                <p>Email: <a href="mailto:info@greencottage.com" class="email-link">info@greencottage.com</a></p>
+            </div>
+            <div class="column">
+                <h3>Навигация</h3>
+                <ul class="nav-list">
+                    <li><a href="#about-us" class="nav-link">О нас</a></li>
+                    <li><a href="contact.html#pupupu" class="nav-link">Контакты</a></li>
+                    <li><a href="#lilili" class="nav-link">Часто задаваемые вопросы</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Социальные сети</h3>
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Pinterest</a>
+            </div>
+            <div class="column">
+                <h3>Подписка на новости</h3>
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Ваш email" class="email-input" required>
+                    <button type="submit" class="subscribe-button">Подписаться</button>
+                </form>
+                <p id="newsletterMessage" class="newsletter-message"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 Зеленая хижина. Все права защищены.
+        </div>
+    </footer>
+</body>
+</html>
