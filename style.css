@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto');
-    src: url(/fonts/Roboto-Regular.woff);
+  font-family: 'KyivTypeTitling';
+  src: url('fonts/KyivTypeTitling-Bold2.woff') format('woff');
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: 'KyivTypeTitling-Bold2';
-    src: local('KyivTypeTitling-Bold2');
-    src: url(/fonts/KyivTypeTitling-Bold2.woff);
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
 }
 @font-face {
     font-family: 'Philosopher';
